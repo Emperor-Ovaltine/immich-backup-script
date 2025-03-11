@@ -45,7 +45,7 @@ else
 fi
 
 if [ $EXIT_CODE -eq 0 ]; then
-    echo "[$TIMESTAMP] Backup protocol has completed successfully. Data has been encrypted and stored in $DEST_DB" and "$DEST_LIB" >> "$LOG_FILE"
+    echo "[$TIMESTAMP] Backup protocol has completed successfully. Data has been encrypted (if rclone is configured to do so) and stored in $DEST_DB" and "$DEST_LIB" >> "$LOG_FILE"
     echo "[$TIMESTAMP] Backup has been completed. Check log for details."
 else
     echo "[$TIMESTAMP] Backup protocol has failed with exit code: $EXIT_CODE" >> "$LOG_FILE"
